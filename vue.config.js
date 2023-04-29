@@ -1,6 +1,7 @@
 // vue.config.js
 const vueConfig = {
-  outputDir: 'doc',
+  outputDir: 'docs',
+  publicPath: './'
   // publicPath: process.env.VUE_APP_BASE_URL, // 前端资源访问根目录， 可配置到cdn目录下。 建议使用命令行环境变量进行替换。
   // css: {
   //   loaderOptions: {
@@ -39,10 +40,10 @@ const vueConfig = {
   // },
 
   // disable source map in production
-  productionSourceMap: false,
-  lintOnSave: undefined,
-  // babel-loader no-ignore node_modules/*
-  transpileDependencies: [],
+  // productionSourceMap: false,
+  // lintOnSave: undefined,
+  // // babel-loader no-ignore node_modules/*
+  // transpileDependencies: [],
 }
 
 module.exports = vueConfig
