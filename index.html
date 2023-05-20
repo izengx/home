@@ -37,32 +37,36 @@
   </div>
 
   <script lang="javascript">
-    try {
-      const replenish = (num) => {
-        return num >= 10 ? num : `0${num}` 
-      }
-      const day_list = ['日', '一', '二', '三', '四', '五', '六'];
-      setInterval(() => {
-        const Y = new Date().getFullYear()
-        const M = new Date().getMonth() + 1
-        const D = new Date().getDay()
-        const h = new Date().getHours()
-        const m = new Date().getMinutes()
-        const s = new Date().getSeconds()
-        const week = new Date().getDay()
+    setInterval(() => {
+      document.getElementById('time').innerHTML = new Date()
+
+    })
+    // try {
+    //   const replenish = (num) => {
+    //     return num >= 10 ? num : `0${num}` 
+    //   }
+    //   const day_list = ['日', '一', '二', '三', '四', '五', '六'];
+    //   setInterval(() => {
+    //     const Y = new Date().getFullYear()
+    //     const M = new Date().getMonth() + 1
+    //     const D = new Date().getDay()
+    //     const h = new Date().getHours()
+    //     const m = new Date().getMinutes()
+    //     const s = new Date().getSeconds()
+    //     const week = new Date().getDay()
   
-        const showDay = `${Y}-${replenish(M)}-${replenish(D)}`
-        const showTime = `${replenish(h)}:${replenish(m)}:${replenish(s)}`
-        const showWeek = day_list[week]
+    //     const showDay = `${Y}-${replenish(M)}-${replenish(D)}`
+    //     const showTime = `${replenish(h)}:${replenish(m)}:${replenish(s)}`
+    //     const showWeek = day_list[week]
   
-        document.getElementById('week').innerHTML = '周' + showWeek
-        document.getElementById('day').innerHTML = showDay
-        document.getElementById('time').innerHTML = showTime
-      }, 1000)
+    //     document.getElementById('week').innerHTML = '周' + showWeek
+    //     document.getElementById('day').innerHTML = showDay
+    //     document.getElementById('time').innerHTML = showTime
+    //   }, 1000)
       
-    } catch (error) {
-      window.alert(error)
-    }
+    // } catch (error) {
+    //   window.alert(error)
+    // }
     
   </script>
 </body>
